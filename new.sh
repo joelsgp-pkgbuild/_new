@@ -1,11 +1,12 @@
 #!/bin/bash
-set -e
+set -eux
 
 scriptdir="$(dirname $0)"
-templatedir="$scriptdir/template"
+templatedir="$scriptdir/templates"
 newname=$1
 newdir="$(pwd)/$newname"
 
+# todo fix
 mkdir "$newdir"
 cd "$templatedir"
 cp -t "$newdir" .gitignore .SRCINFO PKGBUILD
